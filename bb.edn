@@ -5,7 +5,7 @@
    :task (if *command-line-args*
            (apply println "Hello," *command-line-args*)
            (println "Hello, world!"))}
-
+  ls (shell "ls")
   bye
   {:doc "Goodbye world!"
    :task (println "Goodbye, world!")}}}
