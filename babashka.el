@@ -4,7 +4,7 @@
 ;;
 ;; Author: Mykhaylo Bilyanskyy <mb@m1k.pw>
 ;; Maintainer: Mykhaylo Bilyanskyy <mb@m1k.pw>
-;; Version: 1.0.7
+;; Version: 1.0.8
 ;; Package-Requires: ((emacs "27.1") (parseedn "1.1.0"))
 ;;
 ;; Created: 11 Jun 2023
@@ -79,7 +79,7 @@
 (defun babashka--run-shell-command-in-directory (directory command)
   "Run a shell COMMAND in a DIRECTORY and display output in OUTPUT-BUFFER."
   (let ((default-directory directory))
-    (funcall babashka-async-shell-command command)))
+    (funcall babashka-async-shell-command command (format "*Babashka: %s*" command))))
 
 (defun babashka--locate-bb-edn (&optional dir)
   "Recursively search upwards from DIR for bb.edn file."
